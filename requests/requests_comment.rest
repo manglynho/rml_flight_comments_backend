@@ -1,0 +1,17 @@
+GET http://localhost:3001/api/comments/
+###
+GET http://localhost:3001/api/comments?flightId=5a422a851b54a676234d1898
+###
+POST http://localhost:3001/api/comments/ HTTP/1.1
+content-type: application/json
+
+{
+    "comment": "This is a comment",
+    "date": "2018-01-01",
+    "flight": "5a422a851b54a676234d1898",
+    "user": "5a422aa71b54a676234d17f8",
+    "tags": [
+        "Tag 1",
+        "Tag 2"
+    ]
+}
