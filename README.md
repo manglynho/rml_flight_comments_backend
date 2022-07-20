@@ -2,16 +2,13 @@
 
 ### 1. This project cointains two separate apps for frontend and backend:
 
-[Backend on GitHub]
+[Backend on GitHub] https://github.com/manglynho/rml_flight_comments_backend
 
-[Frontend on GitHub]
+[Frontend on GitHub] https://github.com/manglynho/rml_flight_comments_frontend
 
--In both cases after cloning from github run:
-
+-In both cases after cloning from github or unzipping run:
 >npm install
-
 -Start each project with command:
-
 >npm start
 
 Backend already contains a frontend build and it's ready for separated work. 
@@ -30,7 +27,6 @@ In folder (./requests/ ) there is a Postman Collection to test api endpoints.
 Also I wrote requests files that can be used to test the api. 
 You can run those using VsCode or copy the info to Postman.
 
-
 ### 4. Tests
 Test suite for Comments are stored in the tests folder and contain jest tests and data for main requirements and validation.
 
@@ -43,4 +39,4 @@ Frontend has a test suite implemented with Cypress that you can start with the c
 ### 5. Also there is a CD/CI based setup on Heroku Cloud Platform. 
 So any changes commited to the backend repo will be deployed automaticaly on the heroku app created.
 
-[Gateway App on Heroku]
+[Flight Comments App on Heroku]
