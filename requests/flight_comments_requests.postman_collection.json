@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "bdf48b10-cd64-43e4-beb1-2c5df4a9af05",
+		"name": "flight_comments_requests",
+		"description": "Requests to flight comments backend endpoints\n\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all comments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/comments/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"comments",
+						""
+					]
+				},
+				"description": "get all comments from db in json format"
+			},
+			"response": []
+		},
+		{
+			"name": "get all flights ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/flights/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"flights",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save a Comment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"comment\": \"This is a comment\",\n    \"date\": \"2018-01-01\",\n    \"flight\": \"5a422a851b54a676234d1898\",\n    \"user\": \"5a422aa71b54a676234d17f8\",\n    \"tags\": [\n        \"Tag 1\",\n        \"Tag 2\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/comments/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"comments",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get comments by flightID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/comments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"comments"
+					],
+					"query": [
+						{
+							"key": "flightId",
+							"value": "5a422a851b54a676234d1898",
+							"disabled": true
+						},
+						{
+							"key": "sortBy",
+							"value": "date",
+							"disabled": true
+						},
+						{
+							"key": "OrderBy",
+							"value": "asc",
+							"disabled": true
+						},
+						{
+							"key": "comment",
+							"value": "this",
+							"description": "use any field of the schema",
+							"disabled": true
+						},
+						{
+							"key": "currentPage",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				},
+				"description": "return json object with comments.. by the flightID"
+			},
+			"response": []
+		},
+		{
+			"name": "get comment by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/comments/62d5c8f62b1acbecd58de178",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"comments",
+						"62d5c8f62b1acbecd58de178"
+					]
+				},
+				"description": "fixed param for get a comment object"
+			},
+			"response": []
+		}
+	]
+}

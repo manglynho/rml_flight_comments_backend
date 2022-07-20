@@ -25,11 +25,8 @@
     "dotenv": "^14.3.2",
     "express": "^4.17.2",
     "express-async-errors": "^3.1.1",
-    "jsonwebtoken": "^8.5.1",
-    "lodash": "^4.17.21",
     "logger": "^0.0.1",
     "mongoose": "^6.2.1",
-    "mongoose-ip-address": "^0.0.6",
     "mongoose-unique-validator": "^2.0.3"
   },
   "devDependencies": {

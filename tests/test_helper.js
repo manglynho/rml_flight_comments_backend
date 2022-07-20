@@ -1,43 +1,64 @@
-const Gateway = require('../models/gateway')
-const Device = require('../models/device')
+const Comment = require('../models/comment')
+const Flight = require('../models/flight')
+const User = require('../models/user')
 
 
-const nonExistingGatewayId = async () => {
-  const gateway = new Gateway({
-    serial: 'HHHPPP9999',
-    name: 'Some Gateway',
-    ip_v4: '192.168.22.99'
-  })
-  await gateway.save()
-  await gateway.remove()
-
-  return gateway._id.toString()
-}
-
-const gatewaysInDb = async () => {
-  const gateways = await Gateway.find({})
-  return gateways.map(gateway => gateway.toJSON())
-}
-
-const nonExistingDeviceId = async () => {
-  const device = new Device({
-    uid: '90909099',
-    vendor: 'Some Vendor',
+const nonExistingCommentId = async () => {
+  const comment = new Comment({
+    comment: 'Non existing comment',
     date: new Date(),
-    status: true,
-    gateway: '5a422a851b54a676234d17f7',
+    flight: '5a422aa71b54a676234d2065',
+    user: '5a422b3a1b54a676234d17f9',
   })
-  await device.save()
-  await device.remove()
+  await comment.save()
+  await comment.remove()
 
-  return device._id.toString()
+  return comment._id.toString()
 }
 
-const devicesInDb = async () => {
-  const devices = await Device.find({})
-  return devices.map(device => device.toJSON())
+const commentsInDb = async () => {
+  const comments = await Comment.find({})
+  return comments.map(comment => comment.toJSON())
+}
+
+const nonExistingFlightId = async () => {
+  const flight = new Flight({
+    flightNo: '123',
+    airline: 'Southwest'
+  })
+  await flight.save()
+  await flight.remove()
+
+  return flight._id.toString()
+}
+
+const flightsInDb = async () => {
+  const flights = await Flight.find({})
+  return flights.map(flight => flight.toJSON())
+}
+
+const nonExistingUserId = async () => {
+  const user = new User({
+    passport: '123fgh',
+    name: 'James',
+    surname: 'Tucker'
+  })
+  await user.save()
+  await user.remove()
+
+  return user._id.toString()
+}
+
+const usersInDb = async () => {
+  const users = await User.find({})
+  return users.map(user => user.toJSON())
 }
 
 module.exports = {
-  nonExistingGatewayId, nonExistingDeviceId, gatewaysInDb, devicesInDb
+  nonExistingCommentId,
+  nonExistingFlightId,
+  nonExistingUserId, 
+  commentsInDb, 
+  flightsInDb,
+  usersInDb
 }
