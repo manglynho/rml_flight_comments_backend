@@ -2,9 +2,9 @@
 
 ### 1. This project cointains two separate apps for frontend and backend:
 
-[Backend on GitHub] https://github.com/manglynho/rml_flight_comments_backend
+[Backend on GitHub] (https://github.com/manglynho/rml_flight_comments_backend)
 
-[Frontend on GitHub] https://github.com/manglynho/rml_flight_comments_frontend
+[Frontend on GitHub] (https://github.com/manglynho/rml_flight_comments_frontend)
 
 -In both cases after cloning from github or unzipping run:
 >npm install
@@ -39,4 +39,4 @@ Frontend has a test suite implemented with Cypress that you can start with the c
 ### 5. Also there is a CD/CI based setup on Heroku Cloud Platform. 
 So any changes commited to the backend repo will be deployed automaticaly on the heroku app created.
 
-[Flight Comments App on Heroku]
+[Flight Comments App on Heroku] (https://flight-comments.herokuapp.com/)
